@@ -8,8 +8,8 @@ CREATE SCHEMA tutorWeb
         tutorPassword TEXT NOT NULL,
         tutorName VARCHAR(50) NOT NULL,
         tutorEmail VARCHAR(50) NOT NULL,
-        tutorSubjects VARCHAR(50) SET DEFAULT NULL,
-        tutorDescription TEXT DEFAULT NULL,
+        tutorSubjects VARCHAR(50) SET DEFAULT '',
+        tutorDescription TEXT SET DEFAULT NULL,
         tutorRatePerHour DOUBLE(MAX,2) SET DEFAULT 0,
         tutortotalHours INT SET DEFAULT 0,
         
@@ -23,7 +23,7 @@ CREATE SCHEMA tutorWeb
         studentPassWord TEXT NOT NULL,
         studentName VARCHAR(50) NOT NULL,
         studentEmail VARCHAR(50) NOT NULL,
-        studentSubjects VARCHAR(50) SET DEFAULT , 
+        studentSubjects VARCHAR(50) SET DEFAULT '', 
 
         PRIMARY KEY (studentID)
     )
@@ -46,7 +46,7 @@ CREATE SCHEMA tutorWeb
         tutorID int NOT NULL,
         studentID int NOT NULL,
         sessionSubject VARCHAR(50), SET DEFAULT NULL,
-        sessionDate DATE not NULL,
+        sessionDate DATE NOT NULL,
         sessionDuration INT SET DEFAULT 0,
         
         PRIMARY KEY(tutorID, studentID, sessionDate),
