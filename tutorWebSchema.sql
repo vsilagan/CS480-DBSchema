@@ -36,7 +36,7 @@
         reviewTitle VARCHAR(50) DEFAULT 'Review',
         reviewText TEXT DEFAULT NULL,
         
-        PRIMARY KEY(tutorID, studentID, reviewTitle),
+        PRIMARY KEY(tutorID, studentID),
         FOREIGN KEY(tutorID) REFERENCES tutor(tutorID),
         FOREIGN KEY(studentID) REFERENCES student(studentID)
     );
