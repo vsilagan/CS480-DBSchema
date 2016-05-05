@@ -8,6 +8,7 @@
         tutorPassword TEXT NOT NULL,
         tutorName VARCHAR(50),
         tutorEmail VARCHAR(50),
+	tutorAddress VARCHAR(50),
         tutorSubjects VARCHAR(50) DEFAULT NULL,
         tutorDescription TEXT DEFAULT NULL,
         tutorRatePerHour DOUBLE(5,2) DEFAULT 0,
@@ -23,6 +24,7 @@
         studentPassWord TEXT NOT NULL,
         studentName VARCHAR(50) NOT NULL,
         studentEmail VARCHAR(50) NOT NULL,
+        studentAddress VARCHAR(50),
         studentSubjects VARCHAR(50) DEFAULT NULL, 
 
         PRIMARY KEY (studentID)
