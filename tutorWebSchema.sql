@@ -4,7 +4,7 @@
 
     CREATE TABLE tutor
     (
-        tutorID int NOT NULL,
+        tutorID int NOT NULL AUTO_INCREMENT,
         tutorPassword TEXT NOT NULL,
         tutorName VARCHAR(50),
         tutorEmail VARCHAR(50),
@@ -20,10 +20,10 @@
     
     CREATE TABLE student
     (
-        studentID int NOT NULL,
+        studentID int NOT NULL AUTO_INCREMENT,
         studentPassWord TEXT NOT NULL,
         studentName VARCHAR(50) NOT NULL,
-        studentEmail VARCHAR(50) NOT NULL,
+        studentEmail VARCHAR(50) NOT NULL UNIQUE,
         studentAddress VARCHAR(50),
         studentSubjects VARCHAR(50) DEFAULT NULL, 
 
